@@ -6,10 +6,10 @@
 * @license: MIT 
 */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.metisMenu = {}, global.$));
-})(this, (function (exports, $) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
+  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.metisMenu = factory(global.$));
+})(this, (function ($) { 'use strict';
 
   const Util = (($) => {
     const TRANSITION_END = 'transitionend';
@@ -351,10 +351,7 @@
       return MetisMenu.jQueryInterface;
   };
 
-  exports.MetisMenu = MetisMenu;
-  exports.default = MetisMenu;
-
-  Object.defineProperty(exports, '__esModule', { value: true });
+  return MetisMenu;
 
 }));
 //# sourceMappingURL=metisMenu.js.map

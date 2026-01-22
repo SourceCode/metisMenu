@@ -1,6 +1,6 @@
 {
     "name": "metismenu",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "description": "A collapsible jQuery menu plugin",
     "type": "module",
     "main": "dist/metisMenu.js",
@@ -35,7 +35,9 @@
         "css:prod": "sass src:dist",
         "css:min": "sass src/metisMenu.scss dist/metisMenu.min.css -s compressed",
         "build": "npm run js:prod && npm run js:umd:min && npm run js:esm:min && npm run css:prod && npm run css:min",
-        "test": "eslint src/*.js"
+        "lint": "eslint src/*.js",
+        "test": "vitest run",
+        "test:watch": "vitest"
     },
     "repository": "onokumus/metismenu",
     "keywords": [
@@ -75,13 +77,17 @@
     "devDependencies": {
         "@eslint/js": "^9.39.2",
         "@rollup/plugin-node-resolve": "^16.0.3",
+        "@testing-library/dom": "^10.4.1",
+        "@vitest/ui": "^4.0.18",
         "cross-env": "^10.1.0",
         "eslint": "^9.39.2",
         "globals": "^17.0.0",
         "jquery": "^4.0.0",
+        "jsdom": "^27.4.0",
         "rollup": "^4.56.0",
         "sass": "^1.97.3",
-        "terser": "^5.46.0"
+        "terser": "^5.46.0",
+        "vitest": "^4.0.18"
     },
     "peerDependencies": {
         "jquery": ">=4.0.0"

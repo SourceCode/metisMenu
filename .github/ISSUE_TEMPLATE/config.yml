@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / Help
+    url: https://github.com/onokumus/metismenu/discussions
+    about: Ask questions or get help in Discussions
+  - name: Stack Overflow
+    url: https://stackoverflow.com/questions/tagged/metismenu
+    about: Search for answers on Stack Overflow

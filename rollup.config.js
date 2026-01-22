@@ -1,3 +1,4 @@
+import process from 'process';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json' with { type: "json" };
 
@@ -13,7 +14,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 export default [
     {
-        input: 'src/index.js',
+        input: 'src/metisMenu.js',
         external: ['jquery'],
         output: [
             {
@@ -23,10 +24,18 @@ export default [
                     jquery: '$',
                 },
                 file: production ? pkg.main : 'docs/assets/js/metisMenu.js',
-                exports: "named",
                 format: 'umd',
                 sourcemap: true,
-            },
+            }
+        ],
+        plugins: [
+            resolve(),
+        ],
+    },
+    {
+        input: 'src/index.js',
+        external: ['jquery'],
+        output: [
             {
                 file: pkg.module,
                 banner,

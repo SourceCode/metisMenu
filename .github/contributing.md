@@ -1,57 +1,122 @@
-# Contributing to metismenu
+# Contributing to MetisMenu
 
-First and foremost, thank you! We appreciate that you want to contribute to metismenu, your time is valuable, and your contributions mean a lot to us.
+Thank you for your interest in contributing! Open source is built by people like you. ❤️
 
-**What does "contributing" mean?**
+## Ways to Contribute
 
-Creating an issue is the simplest form of contributing to a project. But there are many ways to contribute, including the following:
+- 🐛 Report bugs and issues
+- ✨ Suggest features and improvements
+- 📖 Improve documentation
+- 🔧 Submit pull requests
+- ⭐ Star the project
 
-- Updating or correcting documentation
-- Feature requests
-- Bug reports
+## Getting Started
 
-If you'd like to learn more about contributing in general, the [Guide to Idiomatic Contributing](https://github.com/jonschlinkert/idiomatic-contributing) has a lot of useful information.
+### Prerequisites
 
-**Showing support for metismenu**
+- Node.js 16+
+- npm or yarn
 
-Please keep in mind that open source software is built by people like you, who spend their free time creating things the rest the community can use.
+### Setup Development Environment
 
-Don't have time to contribute? No worries, here are some other ways to show your support for metismenu:
+```bash
+# Clone the repository
+git clone https://github.com/onokumus/metismenu.git
+cd metismenu
 
-- star the [project](https://github.com/onokumus/metismenu)
-- tweet your support for metismenu
+# Install dependencies
+npm install
 
-## Issues
+# Start development server with watch mode
+npm run js:dev
 
-### Before creating an issue
+# In another terminal, watch CSS changes
+npm run css:dev
+```
 
-Please try to determine if the issue is caused by an underlying library, and if so, create the issue there. Sometimes this is difficult to know. We only ask that you attempt to give a reasonable attempt to find out. Oftentimes the readme will have advice about where to go to create issues.
+### Build & Test
 
-Try to follow these guidelines
+```bash
+# Run linting
+npm run lint
 
-- **Investigate the issue**:
-- **Check the readme** - oftentimes you will find notes about creating issues, and where to go depending on the type of issue.
-- Create the issue in the appropriate repository.
+# Run tests
+npm test              # Run tests once
+npm run test:watch   # Run tests in watch mode
 
-### Creating an issue
+# Build for production
+npm run build
 
-Please be as descriptive as possible when creating an issue. Give us the information we need to successfully answer your question or address your issue by answering the following in your issue:
+# Build specific assets
+npm run js:prod    # Build JavaScript
+npm run css:prod   # Build CSS
+npm run js:umd:min # Minify UMD
+npm run js:esm:min # Minify ESM
+npm run css:min    # Minify CSS
+```
 
-- **version**: please note the version of metismenu are you using
-- **extensions, plugins, helpers, etc** (if applicable): please list any extensions you're using
-- **error messages**: please paste any error messages into the issue, or a [gist](https://gist.github.com/)
+## Reporting Issues
 
-## Above and beyond
+### Before Creating an Issue
 
-Here are some tips for creating idiomatic issues. Taking just a little bit extra time will make your issue easier to read, easier to resolve, more likely to be found by others who have the same or similar issue in the future.
+- Check if the issue already exists
+- Review the [README](../README.md)
+- Test with the latest version
 
-- read the [Guide to Idiomatic Contributing](https://github.com/jonschlinkert/idiomatic-contributing)
-- take some time to learn basic markdown. This [markdown cheatsheet](https://gist.github.com/jonschlinkert/5854601) is super helpful, as is the GitHub guide to [basic markdown](https://help.github.com/articles/markdown-basics/).
-- Learn about [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/). And if you want to really go above and beyond, read [mastering markdown](https://guides.github.com/features/mastering-markdown/).
-- use backticks to wrap code. This ensures that code will retain its format, making it much more readable to others
-- use syntax highlighting by adding the correct language name after the first "code fence"
+### Issue Guidelines
 
+Please provide:
 
-[node-glob]: https://github.com/isaacs/node-glob
-[micromatch]: https://github.com/jonschlinkert/micromatch
-[so]: http://stackoverflow.com/questions/tagged/metismenu
+- **Version**: Which version of MetisMenu are you using?
+- **Browser/Environment**: Where does the issue occur?
+- **Steps to reproduce**: Clear steps to reproduce the issue
+- **Expected behavior**: What should happen?
+- **Actual behavior**: What actually happens?
+- **Code example**: If applicable, provide a minimal reproduction
+
+## Pull Requests
+
+### Before Starting
+
+1. Fork the repository
+2. Create a branch from `master`: `git checkout -b feature/your-feature-name`
+3. Keep commits focused and atomic
+
+### Code Standards
+
+- Follow the existing code style
+- Use ES6+ features
+- Add comments for complex logic
+- Ensure no console warnings/errors
+
+### PR Checklist
+
+- [ ] Code follows project style
+- [ ] Tests pass: `npm run test`
+- [ ] Build succeeds: `npm run build`
+- [ ] No breaking changes or documented
+- [ ] Documentation updated if needed
+- [ ] Commit messages are clear
+
+### Commit Messages
+
+Use descriptive commit messages:
+
+```
+feat: add new feature description
+fix: resolve bug description
+docs: update documentation
+style: format code
+refactor: reorganize code structure
+test: add tests
+chore: update dependencies
+```
+
+## Questions?
+
+- Open an issue with the `question` label
+- Check [Stack Overflow](http://stackoverflow.com/questions/tagged/metismenu)
+
+## Code of Conduct
+
+Be respectful and inclusive. We're all here to help each other build something great.
