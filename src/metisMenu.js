@@ -1,3 +1,4 @@
+import './jquery-bridge.js';
 import $ from 'jquery';
 import Util from './util';
 

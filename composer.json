@@ -23,6 +23,6 @@
   },
   "license": "MIT",
   "suggest": {
-    "components/jquery": ">=3.0"
+    "components/jquery": ">=4.0.0"
   }
 }
